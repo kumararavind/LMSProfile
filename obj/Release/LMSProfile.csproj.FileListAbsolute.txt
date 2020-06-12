@@ -72,7 +72,6 @@ E:\LMS\LMSProfile\bin\System.Web.WebPages.Razor.xml
 E:\LMS\LMSProfile\bin\Newtonsoft.Json.xml
 E:\LMS\LMSProfile\bin\Antlr3.Runtime.pdb
 E:\LMS\LMSProfile\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\LMS\LMSProfile\obj\Release\LMSProfile.csprojAssemblyReference.cache
 E:\LMS\LMSProfile\obj\Release\LMSProfile.csproj.CoreCompileInputs.cache
 E:\LMS\LMSProfile\obj\Release\LMSProfile.csproj.CopyComplete
 E:\LMS\LMSProfile\obj\Release\LMSProfile.dll
