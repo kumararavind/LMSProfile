@@ -11,12 +11,14 @@ using System.Web.Security;
 using System.Web.Services.Description;
 using System.Linq.Expressions;
 using System.Configuration;
+using LMSProfile.ExceptionLogger;
 
 namespace LMSProfile.Controllers
 {
     [RoutePrefix("/Login")]
     public class LoginController : Controller
     {
+
         private SqlConnection con;   
         private void connection()
         {
@@ -25,6 +27,7 @@ namespace LMSProfile.Controllers
 
         }
 
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult Index()
         {
@@ -62,6 +65,7 @@ namespace LMSProfile.Controllers
             
         }
 
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult LogOut()
         {
@@ -74,6 +78,7 @@ namespace LMSProfile.Controllers
 
         [HttpPost]
         [Route("Index")]
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult Index(LoginLogout ll,FormCollection form) //this is the login page which u will see at first.
         {
@@ -137,6 +142,7 @@ namespace LMSProfile.Controllers
 
       
         [Route("AddUsers")]
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult AddUsers(ProfileModel model)
         {
@@ -173,6 +179,7 @@ namespace LMSProfile.Controllers
 
         [HttpPost]
         [Route("AddUsers1")]
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult AddUsers1(ProfileModel model, FormCollection form)
         {
@@ -217,7 +224,7 @@ namespace LMSProfile.Controllers
             
         }
 
-
+        [LogExceptions]
         [OutputCache(NoStore = true, Duration = 0, VaryByParam = "None")]
         public ActionResult GetDetails(ProfileModel model) //can be seen in profile page and used to retrieve values inside textboxes.
         {
@@ -265,6 +272,7 @@ namespace LMSProfile.Controllers
 
         [HttpPost]
         [Route("GetDetails1")]
+        [LogExceptions]
         public ActionResult GetDetails1(ProfileModel model) //used to update the profile page after clicking the update button in profile page.
         {
             connection();
